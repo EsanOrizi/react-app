@@ -1,18 +1,21 @@
-import Message from "./components/ListGroup";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
-import {useState} from "react";
-
+import {BsFillCalendarCheckFill} from  'react-icons/bs';
+import ListGroup from "./components/ListGroup";
+import Button from "./components/Button/Button";
+import React from "react";
+import {AiFillHeart} from "react-icons/ai";
+import Like from "./components/Like";
 
 function App() {
-
-    const  [alertVisible, setAlertVisibility] = useState(false);
-
-    return ( <div>
-        {alertVisible && <Alert onClose={() => setAlertVisibility(false)}>My Alert</Alert>}
-        <Button colour='primary' onClick={() => setAlertVisibility(true)}>My Button</Button>
-    </div>
-);
+    let items = [
+        'New York',
+        'London',
+        'Paris'
+    ];
+    const handleSelectItem = (item: string) => {
+        console.log(item);
+    }
+    return <div>
+        <Like onClick={() => console.log('clicked')}/>
+    </div>;
 }
-
 export default App;
